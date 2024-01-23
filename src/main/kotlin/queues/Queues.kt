@@ -1,4 +1,4 @@
-package queues // ktlint-disable filename
+package queues
 
 interface Queue<T> {
     fun enqueue(obj: T)
@@ -52,6 +52,32 @@ class LifoQueue<T> : Queue<T> {
         val last = list[list.lastIndex]
         list.removeAt(list.lastIndex)
         return last
+    }
+
+    override fun isEmpty(): Boolean = list.size == 0
+
+    override fun size(): Int = list.size
+}
+
+class PrQueue<T> : Queue<T> {
+    private var list: MutableList<T> = mutableListOf()
+    override fun enqueue(obj: T) {
+        list.add(obj)
+        list.sortBy { it.toString() }
+    }
+
+    override fun peek(): T? {
+        return if (isEmpty()) {
+            null
+        } else {
+            list[0]
+        }
+    }
+
+    override fun dequeue(): T {
+        val first = list[0]
+        list.removeAt(0)
+        return first
     }
 
     override fun isEmpty(): Boolean = list.size == 0
