@@ -4,33 +4,33 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class FifoQueueTests {
-//    @Test
-//    fun `queue implements FIFO for Int`() {
-//        val fifoQueue = FifoQueue<Int>()
-//
-//        fifoQueue.enqueue(1)
-//        fifoQueue.enqueue(3)
-//        fifoQueue.enqueue(2)
-//        assertEquals(1, fifoQueue.dequeue())
-//        assertEquals(3, fifoQueue.dequeue())
-//        assertEquals(2, fifoQueue.dequeue())
-//    }
+    @Test
+    fun `queue implements FIFO for Int`() {
+        val fifoQueue = FifoQueue<Int>()
+
+        fifoQueue.enqueue(1)
+        fifoQueue.enqueue(3)
+        fifoQueue.enqueue(2)
+        assertEquals(1, fifoQueue.dequeue())
+        assertEquals(3, fifoQueue.dequeue())
+        assertEquals(2, fifoQueue.dequeue())
+    }
 
     // TODO: add comprehensive tests for the FifoQueue<T> class.
 }
 
 class LifoQueueTests {
-//    @Test
-//    fun `queue implements LIFO for Int`() {
-//        val lifoQueue = LifoQueue<Int>()
-//
-//        lifoQueue.enqueue(1)
-//        lifoQueue.enqueue(3)
-//        lifoQueue.enqueue(2)
-//        assertEquals(2, lifoQueue.dequeue())
-//        assertEquals(3, lifoQueue.dequeue())
-//        assertEquals(1, lifoQueue.dequeue())
-//    }
+    @Test
+    fun `queue implements LIFO for Int`() {
+        val lifoQueue = LifoQueue<Int>()
+
+        lifoQueue.enqueue(1)
+        lifoQueue.enqueue(3)
+        lifoQueue.enqueue(2)
+        assertEquals(2, lifoQueue.dequeue())
+        assertEquals(3, lifoQueue.dequeue())
+        assertEquals(1, lifoQueue.dequeue())
+    }
 
     // TODO: add comprehensive tests for the LifoQueue<T> class.
 }

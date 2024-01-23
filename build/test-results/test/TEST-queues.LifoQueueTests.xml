@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="queues.LifoQueueTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-23T11:58:11" hostname="ash26.doc.ic.ac.uk" time="0.01">
+  <properties/>
+  <testcase name="queue implements LIFO for Int" classname="queues.LifoQueueTests" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
