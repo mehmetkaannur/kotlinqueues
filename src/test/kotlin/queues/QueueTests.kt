@@ -82,7 +82,8 @@ class PrQueueTests {
 
     @Test
     fun `queue implements Priority for Point`() {
-        val prQueue = PrQueue<Point>()
+        val pointComp = PointComparator<Point>()
+        val prQueue = PrQueue(pointComp)
 
         prQueue.enqueue(Point(2, 2))
         prQueue.enqueue(Point(1, 1))
@@ -107,3 +108,15 @@ class PrQueueTests {
 }
 
 data class Point(val coordX: Int, val coordY: Int)
+
+class PointComparator<Point> : Comparator<Point> {
+    override fun compare(p0: Point, p1: Point): Int {
+        return if (p0.toString() > p1.toString()) {
+            1
+        } else if (p0.toString() < p1.toString()) {
+            -1
+        } else {
+            0
+        }
+    }
+}

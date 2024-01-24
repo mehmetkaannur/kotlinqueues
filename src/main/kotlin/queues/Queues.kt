@@ -1,5 +1,7 @@
 package queues
 
+import java.util.PriorityQueue
+
 interface Queue<T> {
     fun enqueue(obj: T)
     fun peek(): T?
@@ -59,24 +61,23 @@ class LifoQueue<T> : Queue<T> {
     override fun size(): Int = list.size
 }
 
-class PrQueue<T> : Queue<T> {
-    private var list: MutableList<T> = mutableListOf()
+class PrQueue<T>(comp: Comparator<T>? = null) : Queue<T> {
+    private var list: PriorityQueue<T> = PriorityQueue<T>(comp)
     override fun enqueue(obj: T) {
         list.add(obj)
-        list.sortBy { it.toString() }
     }
 
     override fun peek(): T? {
         return if (isEmpty()) {
             null
         } else {
-            list[0]
+            list.first()
         }
     }
 
     override fun dequeue(): T {
-        val first = list[0]
-        list.removeAt(0)
+        val first = list.first()
+        list.remove(first)
         return first
     }
 
