@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="queues.PrQueueTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-24T15:05:49" hostname="ash05.doc.ic.ac.uk" time="0.015">
+<testsuite name="queues.PrQueueTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-01-25T11:36:46" hostname="beech16.doc.ic.ac.uk" time="0.017">
   <properties/>
-  <testcase name="queue implements Priority for Point" classname="queues.PrQueueTests" time="0.015"/>
+  <testcase name="student queue implements Priority for String" classname="queues.PrQueueTests" time="0.011"/>
+  <testcase name="queue implements Priority for Point" classname="queues.PrQueueTests" time="0.006"/>
+  <testcase name="queue implements Priority for Int" classname="queues.PrQueueTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

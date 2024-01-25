@@ -18,6 +18,17 @@ class QueueNode<T>(
 
     override fun forward() {
         val succ = queue.dequeue()
+        successor.accept(succ)
+    }
+}
 
+class Sink<T> : Acceptor<T> {
+    private var list: MutableList<T> = mutableListOf()
+    override fun accept(obj: T) {
+        list.add(obj)
+    }
+
+    fun getAccepted(): MutableList<T> {
+        return list
     }
 }
